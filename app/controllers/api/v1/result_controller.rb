@@ -1,4 +1,5 @@
-class Api::V1::ResultController < ApplicationController
-  protect_from_forgery with: :exception
-  respond_to :json
+class Api::V1::ResultController < ApiController
+  def index
+    render :json => {:id => 1, :data => {}, :meta => {}}
+  end
 end
